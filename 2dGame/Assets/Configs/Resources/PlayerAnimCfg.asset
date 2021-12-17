@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa32b42beb5c2164ca6f3756fddf18c9, type: 3}
   m_Name: PlayerAnimCfg
   m_EditorClassIdentifier: 
-  Secuence:
+  Sequence:
   - Track: 0
     Sprites:
     - {fileID: 21300000, guid: dd3cc307ddf45074781b8aecf9e6c090, type: 3}
