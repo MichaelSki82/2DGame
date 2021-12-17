@@ -5,9 +5,9 @@ namespace Skipin2D
 {
     public class LevelObjectView : MonoBehaviour
     {
-        [SerializeField] private Transform _transform;
-        [SerializeField] public  SpriteRenderer _spriteRenderer;
-        [SerializeField] private Collider2D _collider;
-        [SerializeField] private Rigidbody2D _rigidbody;
+        public Transform _transform;
+        public  SpriteRenderer _spriteRenderer;
+        public Collider2D _collider;
+        public Rigidbody2D _rigidbody;
     }
 }
