@@ -13,5 +13,11 @@ namespace Skipin2D
             return new Vector3(x == null ? org.x:(float)x, y == null ? org.y : (float)y, z == null ? org.z :(float)z) ;
         }
 
+        public static Vector2 Change(this Vector2 org, object x = null, object y = null)
+        {
+            //через тернарные операции ? и : мы либо возращаем что пришло либо возращаем координаты.
+            return new Vector2(x == null ? org.x : (float)x, y == null ? org.y : (float)y);
+        }
+
     }
 }

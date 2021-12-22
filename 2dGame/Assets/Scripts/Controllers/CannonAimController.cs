@@ -13,9 +13,9 @@ namespace Skipin2D
         private float _angle;
         private Vector3 _axis; //ось поворота
 
-        public CannonAimController(Transform muzzTransform, Transform playerTransform)
+        public CannonAimController(Transform muzzleTransform, Transform playerTransform)
         {
-            _muzzleTransform = muzzTransform;
+            _muzzleTransform = muzzleTransform;
             _targetTransform = playerTransform;
         }
 
