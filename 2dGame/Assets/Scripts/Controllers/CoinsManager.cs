@@ -33,10 +33,10 @@ namespace Skipin2D
                 GameObject.Destroy(contactView.gameObject);
             }
         }
-        public void Update()
-        {
+        //public void Update()
+        //{
 
-        }
+        //}
 
         public void Dispose()
         {
