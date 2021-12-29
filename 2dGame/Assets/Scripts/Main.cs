@@ -13,13 +13,14 @@ namespace Skipin2D
         [SerializeField] private LevelObjectView _playerView;
         [SerializeField] private CannonView _cannonView;
         [SerializeField] private List<LevelObjectView> _coinViews;
-       
+        [SerializeField] private LevelObjectView _enemyView;
 
 
         private SpriteAnimatorController _playerAnimator;
         private SpriteAnimatorController _coinAnimator;
         private PlayerController _playerController;
         private CameraController _cameraController;
+        private EnemyController _enemyController;
         private CannonAimController _cannon;
         private BulletEmitterController _bulletEmitterController;
         private CoinsManager _coinsManager;
@@ -38,6 +39,7 @@ namespace Skipin2D
 
             _playerController = new PlayerController(_playerView, _playerAnimator);
             _cameraController = new CameraController(_playerView, Camera.main);
+            //_enemyController = new EnemyController(_enemyView, _enemyView.transform.position );
             _cannon = new CannonAimController(_cannonView._muzzleTransform, _playerView._transform);
             _bulletEmitterController = new BulletEmitterController(_cannonView._bullets, _cannonView._emitterTransform);
             _coinsManager = new CoinsManager(_playerView, _coinViews, _coinAnimator);
