@@ -14,6 +14,12 @@ namespace Skipin2D
         [SerializeField] private CannonView _cannonView;
         [SerializeField] private List<LevelObjectView> _coinViews;
         [SerializeField] private LevelObjectView _enemyView;
+        [SerializeField] private List<LevelObjectView> _deathZones;
+
+        [SerializeField] private float enemySpeed = 5.0F;
+        [SerializeField] private List<Transform> enemyWayPoints;
+        [SerializeField] private GeneratorLevelView _genView;
+
 
 
         private SpriteAnimatorController _playerAnimator;
@@ -24,7 +30,8 @@ namespace Skipin2D
         private CannonAimController _cannon;
         private BulletEmitterController _bulletEmitterController;
         private CoinsManager _coinsManager;
-
+        private LevelCompleteManager _levelCompleteManager;
+        private GeneratorController _generatorController;
 
 
         void Awake()
@@ -39,11 +46,13 @@ namespace Skipin2D
 
             _playerController = new PlayerController(_playerView, _playerAnimator);
             _cameraController = new CameraController(_playerView, Camera.main);
-            //_enemyController = new EnemyController(_enemyView, _enemyView.transform.position );
+            _enemyController = new EnemyController(_enemyView, enemySpeed, enemyWayPoints);
             _cannon = new CannonAimController(_cannonView._muzzleTransform, _playerView._transform);
             _bulletEmitterController = new BulletEmitterController(_cannonView._bullets, _cannonView._emitterTransform);
             _coinsManager = new CoinsManager(_playerView, _coinViews, _coinAnimator);
-            
+            _levelCompleteManager = new LevelCompleteManager(_playerView, _deathZones);
+            _generatorController = new GeneratorController(_genView);
+            _generatorController.Init();
 
         }
 
@@ -55,6 +64,7 @@ namespace Skipin2D
             _cannon.Update();
             _bulletEmitterController.Update();
             _coinAnimator.Update();
+            _enemyController.Update();
         }
     }
 }
