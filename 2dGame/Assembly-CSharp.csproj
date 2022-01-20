@@ -53,25 +53,38 @@
     <UnityVersion>2020.3.21f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Interfaces\IQuest.cs" />
     <Compile Include="Assets\Scripts\Controllers\EnemyController.cs" />
     <Compile Include="Assets\Scripts\Configs\SpriteAnimatorConfig.cs" />
+    <Compile Include="Assets\Scripts\Configs\QuestStoryConfig.cs" />
     <Compile Include="Assets\Scripts\Controllers\EmitterController.cs" />
     <Compile Include="Assets\Scripts\Controllers\BulletController.cs" />
     <Compile Include="Assets\Scripts\Controllers\BulletEmitterController.cs" />
     <Compile Include="Assets\Scripts\Controllers\CoinsManager.cs" />
+    <Compile Include="Assets\Scripts\Views\GeneratorLevelView.cs" />
+    <Compile Include="Assets\Scripts\Views\QuestObjectView.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IQuestStory.cs" />
     <Compile Include="Assets\Scripts\Views\CannonView.cs" />
     <Compile Include="Assets\Scripts\Controllers\CameraController.cs" />
     <Compile Include="Assets\Scripts\Controllers\CannonAimController.cs" />
     <Compile Include="Assets\Scripts\Utils\Utils.cs" />
     <Compile Include="Assets\Scripts\Controllers\SpriteAnimatorController.cs" />
+    <Compile Include="Assets\Scripts\Views\QuestView.cs" />
     <Compile Include="Assets\Scripts\Views\LevelObjectView.cs" />
     <Compile Include="Assets\Scripts\Main.cs" />
+    <Compile Include="Assets\Scripts\Configs\QuestConfig.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IQuestModel.cs" />
+    <Compile Include="Assets\Scripts\Controllers\QuestController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\MarshingSquaresController.cs" />
     <Compile Include="Assets\Scripts\Controllers\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\QuestStoryController.cs" />
+    <Compile Include="Assets\Scripts\Models\CoinQuestModel.cs" />
+    <Compile Include="Assets\Scripts\Configs\QuestItemConfig.cs" />
+    <Compile Include="Assets\Scripts\Controllers\GeneratorController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\QuestConfiguratorController.cs" />
     <Compile Include="Assets\Scripts\Controllers\LevelCompleteManager.cs" />
     <Compile Include="Assets\Scripts\Utils\ContactPooler.cs" />
-    <Compile Include="Assets\Scripts\Views\GeneratorLevelView.cs" />
-    <Compile Include="Assets\Scripts\Controllers\GeneratorController.cs" />
-    <Compile Include="Assets\Scripts\Controllers\MarshingSquaresController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\ResettableQuestStoryController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
