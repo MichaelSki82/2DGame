@@ -20,6 +20,9 @@ namespace Skipin2D
         [SerializeField] private List<Transform> enemyWayPoints;
         [SerializeField] private GeneratorLevelView _genView;
 
+        [SerializeField] private QuestView _questView;
+        
+
 
 
         private SpriteAnimatorController _playerAnimator;
@@ -32,6 +35,10 @@ namespace Skipin2D
         private CoinsManager _coinsManager;
         private LevelCompleteManager _levelCompleteManager;
         private GeneratorController _generatorController;
+        private QuestConfiguratorController _questConfigurator;
+
+       
+        
 
 
         void Awake()
@@ -53,6 +60,9 @@ namespace Skipin2D
             _levelCompleteManager = new LevelCompleteManager(_playerView, _deathZones);
             _generatorController = new GeneratorController(_genView);
             _generatorController.Init();
+
+            _questConfigurator = new QuestConfiguratorController(_questView);
+            _questConfigurator.Init();
 
         }
 
